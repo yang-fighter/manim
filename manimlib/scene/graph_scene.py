@@ -200,6 +200,7 @@ class GraphScene(Scene):
         color=None,
         x_min=None,
         x_max=None,
+        # discontinuities=None,
         **kwargs
     ):
         """
@@ -243,9 +244,16 @@ class GraphScene(Scene):
                 y = self.y_max
             return self.coords_to_point(x, y)
 
+        # if discontinuities:
+        #     # discontinuities=np.array(list(discontinuities))
+        #     discontinuities=[(xx-x_min)/(x_max-x_min) for xx in discontinuities]
+        # else:
+        #     discontinuities=[]
+        # print(discontinuities)
         graph = ParametricFunction(
             parameterized_function,
             color=color,
+            # discontinuities=discontinuities,
             **kwargs
         )
         graph.underlying_function = func

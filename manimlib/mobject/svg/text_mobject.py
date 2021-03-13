@@ -286,9 +286,9 @@ class Text(SVGMobject):
         size = self.size * 10
         lsh = self.lsh * 10
 
-        if self.font == '':
-            if NOT_SETTING_FONT_MSG != '':
-                print(NOT_SETTING_FONT_MSG)
+        # if self.font == '':
+        #     if NOT_SETTING_FONT_MSG != '':
+        #         print(NOT_SETTING_FONT_MSG)
 
         dir_name = consts.TEXT_DIR
         hash_name = self.text2hash()

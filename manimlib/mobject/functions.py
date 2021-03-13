@@ -73,7 +73,8 @@ class ParametricFunction(VMobject):
             if len(points) > 0:
                 self.start_new_path(points[0])
                 self.add_points_as_corners(points[1:])
-        self.make_smooth()
+        if discontinuities.size ==0 :
+            self.make_smooth()
         return self
 
 
